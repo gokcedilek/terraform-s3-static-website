@@ -1,3 +1,5 @@
+# declare variables that will be used in the project
+# see https://www.terraform.io/docs/language/values/variables.html#declaring-an-input-variable 
 variable "domain_name" {
   type        = string
   description = "The domain name for the website."

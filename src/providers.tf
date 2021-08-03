@@ -8,18 +8,19 @@ terraform {
     }
   }
 
+  # where the state files will be stored
   backend "s3" {
-    bucket = "yourdomain-terraform"
-    key    = "prod/terraform.tfstate"
-    region = "eu-west-1"
+    bucket = "mfe-terraform-demo-1"
+    key    = "terraform-files/terraform.tfstate"
+    region = "us-west-2"
   }
 }
 
 provider "aws" {
-  region = "eu-west-1"
+  region = "us-west-2"
 }
 
-provider "aws" {
-  alias  = "acm_provider"
-  region = "us-east-1"
-}
+# provider "aws" {
+#   alias  = "acm_provider"
+#   region = "us-west-2"
+# }
